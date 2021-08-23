@@ -1,6 +1,6 @@
 const container = document.querySelector('.container');
 
-let input = 4;
+let input = 64;
 let count = input*input;
 
 container.style.gridTemplateColumns = `repeat(${input},1fr)`;
@@ -20,4 +20,3 @@ squares.forEach((square) => {
         square.style.backgroundColor ='black';
     })
 });
-console.log(squares);
