@@ -1,6 +1,6 @@
 const container = document.querySelector('.container');
 
-let input = 64;
+let input = 4;
 let count = input*input;
 
 container.style.gridTemplateColumns = `repeat(${input},1fr)`;
@@ -20,3 +20,14 @@ squares.forEach((square) => {
         square.style.backgroundColor ='black';
     })
 });
+
+let clearBtn = document.querySelector('#clear');
+clearBtn.addEventListener('click',()=>{
+    clearBoard(squares)
+})
+
+function clearBoard(board){
+    board.forEach((square)=>{
+        square.style.backgroundColor='white';
+    })
+}
