@@ -1,16 +1,23 @@
 main{
     margin: 0;
     padding: 0;
+    position: relative;
+}
+h1{
+    text-align: center;
+    padding: 20px;
 }
 
 .container{
     display: grid;
-    
+    position: absolute;
+    left: 35.5%;
     border-style: solid;
+    height: 540px;
+    width: 540px;
+
 }
 .div-style{
-    
-    height: 50px;
     background-color: aqua;
     border-style: solid;
     border-color: brown;

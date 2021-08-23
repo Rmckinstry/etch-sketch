@@ -1,6 +1,6 @@
 const container = document.querySelector('.container');
 
-let input = 10;
+let input = 4;
 let count = input*input;
 
 container.style.gridTemplateColumns = `repeat(${input},1fr)`;
