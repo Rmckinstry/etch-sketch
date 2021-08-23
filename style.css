@@ -7,7 +7,6 @@ h1{
     text-align: center;
     padding: 20px;
 }
-
 .container{
     display: grid;
     position: absolute;
@@ -15,7 +14,6 @@ h1{
     border-style: solid;
     height: 540px;
     width: 540px;
-
 }
 .div-style{
     background-color: aqua;
