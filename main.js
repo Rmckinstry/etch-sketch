@@ -10,3 +10,14 @@ for(let i=0;i<count;i++){
     container.appendChild(div)
     div.classList.add('div-style')
 }
+
+/////////////////
+
+let squares = document.querySelectorAll('.div-style');
+
+squares.forEach((square) => {
+    square.addEventListener('mouseover',()=>{
+        square.style.backgroundColor ='black';
+    })
+});
+console.log(squares);
