@@ -1,14 +1,20 @@
 const container = document.querySelector('.container');
 
-let input = 4;
-let count = input*input;
+let userInput = prompt("Enter Board Size. 1 - 100");
 
-container.style.gridTemplateColumns = `repeat(${input},1fr)`;
+generateBoard(userInput)
 
-for(let i=0;i<count;i++){
-    const div = document.createElement('div')
-    container.appendChild(div)
-    div.classList.add('div-style')
+function generateBoard(size){
+    const boardLength = Number(size);
+    const boardArea = boardLength*boardLength;
+
+    container.style.gridTemplateColumns = `repeat(${boardLength},1fr)`;
+
+    for(let i=0;i<boardArea;i++){
+        const div = document.createElement('div')
+        container.appendChild(div)
+        div.classList.add('div-style')
+    }
 }
 
 /////////////////
@@ -30,4 +36,7 @@ function clearBoard(board){
     board.forEach((square)=>{
         square.style.backgroundColor='white';
     })
+    while (container.firstChild){
+        container.removeChild(container.firstChild);
+    }
 }
