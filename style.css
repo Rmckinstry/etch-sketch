@@ -16,5 +16,6 @@ h1{
     width: 540px;
 }
 .div-style{
-    background-color: aqua;
+    border-style: solid;
+    border-width: 0.1px;
 }
