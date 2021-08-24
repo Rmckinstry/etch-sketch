@@ -9,6 +9,8 @@ function generateBoard(size){
         container.appendChild(div)
         div.classList.add('div-style')
     }
+
+    eventAdder()
 }
 
 function eventAdder(){
@@ -18,24 +20,25 @@ function eventAdder(){
             square.style.backgroundColor ='black';
         })
     });
-    
-    let clearBtn = document.querySelector('#clear');10
-    clearBtn.addEventListener('click',()=>{
-        clearBoard(squares)
-    })
+
 }
 
-function clearBoard(board){
-    board.forEach((square)=>{
-        square.style.backgroundColor='white';
-    })
-    while (container.firstChild){
+function clearBoard(){
+    do{
         container.removeChild(container.firstChild);
-    }
+    } while(container.firstChild);
+
+    const newInput = prompt("Enter New Board Size. 1 - 100");
+    generateBoard(newInput);
 }
 
+// first board code
 const container = document.querySelector('.container');
 let userInput = prompt("Enter Board Size. 1 - 100");
 
 generateBoard(userInput)
-eventAdder()
+
+let clearBtn = document.querySelector('#clear');10
+clearBtn.addEventListener('click',()=>{
+    clearBoard()
+})
