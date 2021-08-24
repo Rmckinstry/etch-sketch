@@ -1,9 +1,3 @@
-const container = document.querySelector('.container');
-
-let userInput = prompt("Enter Board Size. 1 - 100");
-
-generateBoard(userInput)
-
 function generateBoard(size){
     const boardLength = Number(size);
     const boardArea = boardLength*boardLength;
@@ -17,20 +11,19 @@ function generateBoard(size){
     }
 }
 
-/////////////////
-
-let squares = document.querySelectorAll('.div-style');
-
-squares.forEach((square) => {
-    square.addEventListener('mouseover',()=>{
-        square.style.backgroundColor ='black';
+function eventAdder(){
+    let squares = document.querySelectorAll('.div-style');
+    squares.forEach((square) => {
+        square.addEventListener('mouseover',()=>{
+            square.style.backgroundColor ='black';
+        })
+    });
+    
+    let clearBtn = document.querySelector('#clear');10
+    clearBtn.addEventListener('click',()=>{
+        clearBoard(squares)
     })
-});
-
-let clearBtn = document.querySelector('#clear');
-clearBtn.addEventListener('click',()=>{
-    clearBoard(squares)
-})
+}
 
 function clearBoard(board){
     board.forEach((square)=>{
@@ -40,3 +33,9 @@ function clearBoard(board){
         container.removeChild(container.firstChild);
     }
 }
+
+const container = document.querySelector('.container');
+let userInput = prompt("Enter Board Size. 1 - 100");
+
+generateBoard(userInput)
+eventAdder()
