@@ -32,7 +32,7 @@ function clearBoard(){
     let newInput = "";
     do{
         newInput = prompt("Enter New Board Size. 1 - 100");
-    }while(!(newInput > 0 && newInput < 101)); //accepts only nums 1-100
+    }while(!(newInput > 0 && newInput < 101 && newInput%1==0)); //accepts only nums 1-100
     
     generateBoard(newInput);
 }
@@ -42,7 +42,7 @@ const container = document.querySelector('.container');
 let userInput = ""
 do{
     userInput = prompt("Enter Board Size. 1 - 100");
-}while(!(userInput>0 && userInput<101));
+}while(!(userInput>0 && userInput<101 &&userInput%1==0));
 
 generateBoard(userInput)
 
